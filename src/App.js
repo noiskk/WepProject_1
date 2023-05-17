@@ -1,10 +1,10 @@
 
-import Login from "./Login"
+import Login1 from "./Login1"
 
 function App() {
   return (
     <div>
-      <Login />
+      {/* <Login1 /> */}
 
     </div>
   );

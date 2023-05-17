@@ -1,0 +1,120 @@
+body {
+  background-color:lightslategray;
+  color : #3f4c5a;
+}
+
+.hidden {
+  display: none;
+}
+
+#clock {
+  margin-top: 18%;
+
+  text-align: center;
+  font-weight: lighter;
+  font-size: 5.0em;
+}
+
+#greeting {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 3.0em;
+}
+
+#login-form {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#name-input {
+  width: 240px;
+  height: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color:#3f4c5a;
+  color:#3f4c5a;
+  font-size: 1.2em;
+  text-align: center;
+  background-color:lightslategray;
+}
+
+#name-input::placeholder {
+  color:#586a7e;
+  text-align: center;
+}
+
+#todo-form {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#todo-input {
+  width: 100px;
+  height: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color:#3f4c5a;
+  color:#3f4c5a;
+  font-size: 1em;
+  text-align: center;
+  background-color:lightslategray;
+}
+
+#todo-input::placeholder {
+  color:#586a7e;
+  text-align: center;
+}
+
+#todo-list {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#todo-list button {
+  background-color:#ffffff00;
+  border: none;
+  color: rgb(110, 67, 67);
+}
+
+#quote {
+  width: 90%;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px 5% 0 5%;
+}
+
+#bible {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #4f565deb;
+}
+
+#verse {
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  color: #4f565deb;
+}
+
+#weather {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-style: italic;
+  font-size: 13px;
+  color: #3f4c5acf;
+}
+
+#city {
+  font-style: normal;
+  font-size: 15px;
+  color: #4f565deb;
+  text-align: center;
+  margin-bottom: 2px;
+}
