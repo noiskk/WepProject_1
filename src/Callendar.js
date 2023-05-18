@@ -77,6 +77,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
             {formattedDate}
           </span>
         </div>
+        
       );
       day = addDays(day, 1);
     } // for
