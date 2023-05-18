@@ -1,5 +1,6 @@
-import Login from './Login'
-import Clock from './Clock'
+import Login from './Login';
+import Clock from './Clock-main';
+import Todo from './Todo';
 
 function Home() {
 
@@ -8,14 +9,7 @@ function Home() {
     <div>
       <Clock />
       <Login />
-      <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="Write a To Do and Press Enter" required />
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="quote">
-        <div id="bible"></div>
-        <div id="verse"></div>
-      </div>
+      {/* <Todo /> */}
 
       <div id="weather">
         <div id="city"></div>

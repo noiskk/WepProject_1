@@ -1,0 +1,122 @@
+
+.calendar {
+  .header {
+      .col.col-first {
+          margin-left: 1%;
+          .text {
+              font-size: 0.8em;
+          }
+          .text.month {
+              margin-right: 5px;
+              font-size: 1.6em;
+              font-weight: 600;
+          }
+      }
+      .col.col-end {
+          svg {
+              margin-left: 5%;
+              color: transparentize(gray, 0.2);
+              &:hover {
+                  transform: scale(1.15);
+                  color: theme.$dark-gray-color;
+              }
+          }
+      }
+  }
+  .days {
+      font-weight: 600;
+      font-size: 0.65em;
+      padding: 2px;
+      color: theme.$dark-gray-color;
+      .col {
+          padding-left: 1%;
+          background: transparentize(theme.$step-color, 0.6);
+          border-radius: 10px;
+      }
+  }
+  .body {
+      .row {
+          .col {
+
+              border: 0.4px solid transparentize(gray, 0.4);
+              border-radius: 3px;
+              font-size: 0.8em;
+              span {
+                  margin: 4px 0 0 4px;
+              }
+              .not-valid {
+                  color: theme.$gray-color;
+              }
+              img {
+                  opacity: 0.1;
+              }
+          }
+          .col.cell.valid {
+              &:hover {
+                  transform: scale(1.01);
+                  border: none;
+                  background: transparentize(theme.$gray-color, 0.5);
+              }
+          }
+          .col.cell.selected {
+              transform: scale(1.02);
+              border: none;
+              background: theme.$sub-color;
+              color: theme.$main-color;
+              font-weight: 600;
+          }
+      }
+  }
+}
+
+//-----------------------------------------------------------
+
+@mixin size($width: 14px, $height: 14px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin shape(
+  $background: transparent,
+  $border: transparent,
+  $border-radius: 0
+) {
+  background: $background;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+@mixin shadow($size: 3px, $color: black, $amount: 0.5) {
+  box-shadow: $size $size 0px 0px transparentize($color, $amount);
+}
+
+@mixin font(
+  $color: black,
+  $font-family: theme.$description-font,
+  $font-size: 1em,
+  $font-weight: 500
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin hover-event {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+@mixin flex-column($justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex-row($justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

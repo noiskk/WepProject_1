@@ -1,0 +1,46 @@
+.col.col-first {
+    margin-left: 1%;
+    .text {
+        font-size: 0.8em;
+    }
+    .text.month {
+        margin-right: 5px;
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+}
+
+.col.col-end {
+    margin-left: 5%;
+    color: transparentize(gray, 0.2);
+}
+
+.days {
+    font-weight: 600;
+    font-size: 0.65em;
+    padding: 2px;
+    .col {
+        padding-left: 1%;
+        border-radius: 10px;
+    }
+}
+
+.col {
+
+    border: 0.4px solid transparentize(gray, 0.4);
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.col.cell.valid {
+    &:hover {
+        transform: scale(1.01);
+        border: none;
+    }
+}
+
+.col.cell.selected {
+    transform: scale(1.02);
+    border: none;
+    font-weight: 600;
+}
