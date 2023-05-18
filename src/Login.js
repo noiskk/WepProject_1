@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Clock from './Clock'
 
 export default function Login(){
   const HIDDEN_CLASSNAME = "hidden";
@@ -12,7 +13,6 @@ export default function Login(){
 
   return (
     <div>
-      <h2 id="clock">00:00</h2>
       <form id="login-form">
         <input 
           id="name-input" 
@@ -25,20 +25,7 @@ export default function Login(){
         />
       </form>
       <h1 class="hidden" id="greeting"></h1>
-      <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="Write a To Do and Press Enter" required />
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="quote">
-        <div id="bible"></div>
-        <div id="verse"></div>
-      </div>
-
-      <div id="weather">
-        <div id="city"></div>
-        <span></span>
-        <span></span>
-      </div>
+      
     </div>
     
   )
