@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { format, addMonths, subMonths } from 'date-fns';
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from 'date-fns';
 import { isSameMonth, isSameDay, addDays, parse } from 'date-fns';
-import './_style.css';
+import './callendar_style.css';
 
 const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
   return (
@@ -94,7 +94,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
 
 
 
-const Calendar = () => {
+const Callendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -125,4 +125,4 @@ const Calendar = () => {
   )
 }
 
-export default Calendar;
+export default Callendar;

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-
-
-export default function Login(){
+const Login = () => {
   const HIDDEN_CLASSNAME = "hidden";
   const USERNAME_KEY = "username";
 
@@ -10,36 +8,31 @@ export default function Login(){
                                                                                                                                                
   const [user, setUser] = useState(""); 
   const [logined, setLogined] = useState(false);
-  const [local, setLocal] = useState("");
 
-  const onLoginSubmit = (event) =>                                                                                                        {
-    event.preventDefault(); // 브라우저의 기본 동작을 막는 역할 ex)새로고침
-    localStorage.setItem(USERNAME_KEY, "hello");
-  
-    //loginForm.classList.add(HIDDEN_CLASSNAME);
-    //const username = loginInput.value;
-    //localStorage.setItem(USERNAME_KEY, user);
+  const onChange = (e) => {
+    setUser(e.target.value);
   }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem(USERNAME_KEY, user);
+  }
+
 
   if(savedUsername === null){
     return(
       <div>
         <form id="login-form">
-          
           <input 
             id="name-input" 
             maxLength="14" 
             type="text"
             placeholder="What is your name?" 
             value={user} 
-            onChange={(e) => {
-              setUser(e.target.value);
-            }}
-            onSubmit={onLoginSubmit}
-            className={logined ? 'hidden' : null}     
+            onChange={onChange}
+            //className={logined ? 'hidden' : null}     
             required 
           />
-          
+          <i className='arrow left' onClick={onSubmit}></i>
         </form>
       </div>
     )
@@ -48,37 +41,11 @@ export default function Login(){
     return(
       <div>
         <h1 className="hidden" id="greeting"></h1>
+        <h1 id="greeting">{localStorage.getItem(USERNAME_KEY)}</h1>
       </div>
     )
   }
 }
 
+export default Login;
 
-
-
-// const loginForm = document.querySelector("#login-form");
-// const loginInput = loginForm.querySelector("input");
-// const greeting = document.querySelector("#greeting");
-
-// function onLoginSubmit(event){
-//   event.preventDefault(); // 브라우저의 기본 동작을 막는 역할 ex)새로고침
-//   loginForm.classList.add(HIDDEN_CLASSNAME);
-//   const username = loginInput.value;
-//   localStorage.setItem(USERNAME_KEY, username);
-//   paintGreetings(username);
-// }
-
-// function paintGreetings(username){
-//   greeting.innerText = `Hello ${username}`;
-//   greeting.classList.remove(HIDDEN_CLASSNAME);
-// }
-
-// const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-// if(savedUsername === null){
-//   loginForm.classList.remove(HIDDEN_CLASSNAME);
-//   loginForm.addEventListener("submit", onLoginSubmit);
-// }  
-// else {
-//   paintGreetings(savedUsername);
-// }
