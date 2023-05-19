@@ -16,8 +16,8 @@ const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
         </span>
       </div>
       <div className='col col-end'>            {/*arrow icon*/}
-        <button onClick={prevMonth}>prevMonth</button>
-        <button onClick={nextMonth}>nextMonth</button>
+        <i className='arrow left' onClick={prevMonth}></i>
+        <i className='arrow right' onClick={nextMonth}></i>
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
               : 'valid'
           }`}
           key={day}
-          onClick={() => onDateClick(parse(cloneDay))}
+          onClick={() => onDateClick(cloneDay)}
         >
           <span
             className={
