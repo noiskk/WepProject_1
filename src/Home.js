@@ -1,7 +1,6 @@
 import Login from './Login';
 import Clock from './Clock-main';
 import Todo from './Todo';
-import Loginform from './Loginform';
 
 function Home() {
 
